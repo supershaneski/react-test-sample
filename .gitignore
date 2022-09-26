@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+/_bin
+*.bu.css
+*.bu.js
+
 # testing
 /coverage
 
