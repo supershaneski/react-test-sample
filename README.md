@@ -7,6 +7,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This is a sample project to explore [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/).
 
+# Run Tests
+
+To run tests
+
+```sh
+$ npm test
+```
+
+This command will run all test files wherever it is within the project folder.
+
+The format of test file is `ComponentName.test.js`.
 
 # Installation
 
