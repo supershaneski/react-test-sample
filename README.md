@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Motivation
 
-This is a sample project to explore [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/).
+This is a sample project to explore [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)(RTL).
 
 # Run Tests
 
