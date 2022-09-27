@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Greeting from './components/Greeting';
+
 function App() {
-  console.log(process.env.REACT_APP_REMOTE_URL)
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +19,7 @@ function App() {
         >
           Learn React
         </a>
+        <Greeting url="greeting" />
       </header>
     </div>
   );
