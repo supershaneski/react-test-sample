@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-import Greeting from './components/Greeting';
+import Button from './components/Button';
 
 function App() {
   return (
@@ -19,7 +19,9 @@ function App() {
         >
           Learn React
         </a>
-        <Greeting url="greeting" />
+        <div style={{width: '50%'}}>
+        <Button onClick={() => console.log('button click')}>Click Me</Button>
+        </div>
       </header>
     </div>
   );
