@@ -42,16 +42,22 @@ describe('Users', () => {
     beforeAll(() => server.listen())
     afterEach(() => server.resetHandlers())
     afterAll(() => server.close())
-
+    
     test('receive remote data', async () => {
         
-        render(<Users page={0} count={5} />)
+        const count = 4
 
-        const totalMessage = await screen.findByText(/Total: 5/i)
+        render(<Users page={0} count={count} />)
 
-        screen.debug()
+        const loadingMessage = await screen.getByText(/Loading.../i)
+        expect(loadingMessage).toBeInTheDocument()
 
-        expect(screen.getAllByRole('listitem')).toHaveLength(5)
+        const totalMessage = await screen.findByText(`Total: ${count}`)
+
+        //screen.debug()
+
+        expect(screen.getAllByRole('listitem')).toHaveLength(count)
+        expect(totalMessage).toBeInTheDocument()
         
     })
 

@@ -4,6 +4,24 @@ import './App.css';
 
 import Users from './components/Users';
 
+const DataFlux = () => {
+  const [data, setData] = React.useState((new Date()).toLocaleTimeString())
+  React.useEffect(() => {
+    const flux = setInterval(() => {
+      setData((new Date()).toLocaleTimeString())
+    }, 1000)
+    return () => {
+      clearInterval(flux)
+    }
+  }, [])
+  return (
+    <span style={{
+      fontSize: '1em',
+      color: '#FFF'
+    }}>{data}</span>
+  )
+}
+
 function App() {
   return (
     <div className="App">
@@ -20,6 +38,7 @@ function App() {
         >
           Learn React
         </a>
+        <div><DataFlux /></div>
         <div style={{width: '50%', height: 200, marginTop: '1em', overflow: 'auto'}}>
           <Users page={1} count={10} />
         </div>
