@@ -1,7 +1,8 @@
+import React from 'react'
 import logo from './logo.svg';
 import './App.css';
 
-import Button from './components/Button';
+import Users from './components/Users';
 
 function App() {
   return (
@@ -19,8 +20,8 @@ function App() {
         >
           Learn React
         </a>
-        <div style={{width: '50%'}}>
-        <Button onClick={() => console.log('button click')}>Click Me</Button>
+        <div style={{width: '50%', height: 200, marginTop: '1em', overflow: 'auto'}}>
+          <Users page={1} count={10} />
         </div>
       </header>
     </div>
