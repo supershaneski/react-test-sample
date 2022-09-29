@@ -54,7 +54,7 @@ describe('Users', () => {
 
         const totalMessage = await screen.findByText(`Total: ${count}`)
 
-        //screen.debug()
+        screen.debug()
 
         expect(screen.getAllByRole('listitem')).toHaveLength(count)
         expect(totalMessage).toBeInTheDocument()

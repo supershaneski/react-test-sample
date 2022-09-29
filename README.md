@@ -19,6 +19,10 @@ This command will run all test files wherever it is within the project folder.
 
 The format of test file is `ComponentName.test.js`.
 
+
+For mocking API remote access, I used [msw](https://mswjs.io). See `Greeting2.test.js`, `User.test.js` and `Users.test.js` test files for reference.
+
+
 # Installation
 
 Clone the repository, install the dependencies and run
